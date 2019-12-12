@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>重要公告</title>
+</head>
+<style>
+    .modal_notice{
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1050;
+        display: none;
+        overflow: hidden;
+        -webkit-overflow-scrolling: touch;
+        outline: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+        display: block;
+        -webkit-transition: opacity .15s linear;
+        -o-transition: opacity .15s linear;
+        transition: opacity .15s linear;
+        background: rgba(0,0,0,.4);
+    }
+    .modal-dialog {
+        position: relative;
+        width: 800px;
+        margin: 150px auto;
+        -webkit-transition: -webkit-transform .3s ease-out;
+        -o-transition: -o-transform .3s ease-out;
+        transition: transform .3s ease-out;
+        -webkit-transform: translate(0,0);
+        -ms-transform: translate(0,0);
+        -o-transform: translate(0,0);
+        transform: translate(0,0);
+    }
+    .modal-content{
+        -webkit-box-shadow: 0 5px 15px rgba(0,0,0,.5);
+        box-shadow: 0 5px 15px rgba(0,0,0,.5);
+        position: relative;
+        background-color: #fff;
+        -webkit-background-clip: padding-box;
+        background-clip: padding-box;
+        border: 1px solid #f1f1f1;
+        border: 1px solid rgba(0,0,0,.1);
+        border-radius: 12px;
+        outline: 0;
+        color:#333333;
+        padding: 16px 44px 26px;
+
+    }
+    .modal-body{
+        text-align: left;
+        line-height: 24px;
+        font-size: 14px;
+    }
+    .modal-header h4{
+        border-bottom:2px solid #b51b2e;
+        line-height: 60px;
+        font-size:24px;
+        color:#b51b2e;
+        letter-spacing:0;
+        text-align:center;
+        display: block;
+        width: 100%;
+        margin: 0;
+    }
+    .modal-body h6{
+        font-size:18px;
+        color:#333333;
+        font-weight: normal;
+        margin: 36px 0 15px;
+    }
+    .modal-body p{
+        font-weight: normal;
+        margin: 0 0 15px;
+        display: table;
+        width: 100%;
+        color: #333;
+    }
+    .modal-body p.content-text{
+        font-weight: normal;
+        margin: 5px 0 0px;
+        display: table;
+        width: 100%;
+        color: #666;
+    }
+    .modal-body p.content-text span{
+        font-weight: normal;
+        margin: 5px 0 0px;
+        display: table;
+        width: 100%;
+        color: #333;
+    }
+</style>
+<body>
+
+<div class="modal_notice" id="modal_notice">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>
+                    重要公告
+                    <img src="icon_close.png" style="float: right; margin:15px -15px 0 0; cursor: pointer;" class="close-modal">
+                </h4>
+            </div>
+            <div class="modal-body">
+                <h6>
+                    尊敬的MDF会员用户：
+                </h6>
+                <p>
+                    您好，为向您提供更加优质高效的金融服务，MDF会员系统将于2018年5月7日 (周一) 下午17:00 - 23:00进行系统升级，
+                    新系统于5月8日 (周二) 00:00正式发布！
+                </p>
+                <p>
+                    关于上线的相关问题解答如下：
+                </p>
+                <p class="content-text">
+                    <span>1.资金迁移</span>
+                    您账户中可用的账户余额将被安全迁移至新系统（Thankfund）。自5月8日起，您将只能使用新平台进行出入金，旧会员系统将只用作查看使用。截止到迁移之前的交易记录可以通过登录慢点富会员系统（https://member.mdf.com）进行查看。
+                    <span>2.关于出金的影响</span>
+                    2018年5月7日 (周一) 00:00-23:00期间，慢点富会员系统将暂停提现功能。 <br>
+                    5月8日00:00起，提现功能恢复正常使用。
+                    <span>3.关于充值的影响</span>
+                    2018年5月7日（周一）17:00-23:00期间，慢点富会员系统将暂停充值功能。 <br>
+                    5月8日00:00起，充值功能恢复正常使用。
+                </p>
+                <p style="padding-top: 25px;">
+                    升级期间给您带来的不便，敬请谅解！
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    $('.close-modal').click(function(){
+        $("#modal_notice").hide();
+    });
+</script>
+</body>
+</html>
